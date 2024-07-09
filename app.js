@@ -8,7 +8,7 @@ const optionBd = {
     host: 'localhost',
     user: 'root',
     password: '',
-    port : 4000,
+    port : 3306,
     database : 'ecole241'
 }
 //extraction des donne du formulaire
@@ -40,7 +40,7 @@ req.getConnection((erreur,connection) =>{
 
 
 app.post('/apprenants', (req, res) => {
-+9
+
   let nom = req.body.nom;
   
     let prenom = req.body.prenom;

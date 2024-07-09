@@ -20,5 +20,8 @@
         "src": "/erreur",
         "dest": "erreur.ejs"
       }
-    ]
+    ],
+    "static": {
+      "public": "public"
+    }
   }
