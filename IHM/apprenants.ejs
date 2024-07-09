@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: rgb(116, 122, 128);
+    justify-content: space-around;
+    align-items: center;
+}
+form{
+    width: 400px;
+    height: 40%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+input{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.etudiant{
+    width: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.inside{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.element{
+    width: 30%;
+    height: 40%;
+    background-color: rgb(143, 136, 136);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+   align-items: center;
+   padding-top: 5px;
+    margin: 10px;
+    
+}
+.button{
+    width: 9em;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 2ms;
+}
+.button:hover{
+    background-color: rgb(160, 150, 150);
+    transform: scale(20px);
+}
+   </style>
+</head>
+<body>
+    <div class="etudiant"><h3>Etudiant</h3>
+    <div class="inside">
+         <% for (i=0; i<resultat.length; i++) {%>
+
+        <div class="element">
+        <div class="nom"> <%= resultat[i].nom %> </div>
+      <div class="prenom"><%= resultat[i].prenom %></div>
+      <div class="sexe"><%= resultat[i].sexe %></div>
+      <div class="quartier"><%= resultat[i].quartier %></div>
+      <div class="referenciel"><%= resultat[i].referenciel %></div>
+      <div class="groupe"><%= resultat[i].groupe %></div>
+        <input class="button" href="./accueil.ejs" type="button" value="modifier" onclick="remplirFormulaire('<% resultat[i].id %> ', '<% resultat[i].nom %> ' , '<% resultat[i].prenom %> ' , '<% resultat[i].sexe %> ' , '<% resultat[i].quartier %> ', '<% resultat[i].referenciel %> ', '<% resultat[i].groupe %> ')">
+        <input class="button" type="button" value="supprimer" onclick="">
+      </div>
+      <%} %> 
+    </div>
+</div>
+</body>
+ <script>
+
+function remplirFormulaire(id , nom , prenom , sexe , quartier , referenciel , groupe){
+    document.getElementById("id").value = id,
+    document.getElementById("nom").value = nom,
+    document.getElementById("prenom").value = prenom,
+    document.getElementById("sexe").value = sexe,
+    document.getElementById("quartier").value = quartier,
+    document.getElementById("referenciel").value = referenciel,
+    document.getElementById("groupe").value = groupe;
+}
+
+ </script>
+
+</html>
