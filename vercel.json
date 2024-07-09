@@ -1,0 +1,9 @@
+{
+"version":2,
+"name":"tuto",
+"builds":[
+    {"src": "app.js", "use": "@vercel/node"}
+],
+"routes":[{"src":"/(.*)", "dest":"./accueil.ejs"}]
+
+}

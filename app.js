@@ -40,15 +40,8 @@ req.getConnection((erreur,connection) =>{
 
 
 app.post('/apprenants', (req, res) => {
-
-  let id = req.body.id === "" ? null : req.body.id;
-
-
-
-
-
-
-    let nom = req.body.nom;
++9
+  let nom = req.body.nom;
   
     let prenom = req.body.prenom;
   
