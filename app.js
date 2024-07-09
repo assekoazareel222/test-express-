@@ -8,7 +8,7 @@ const optionBd = {
     host: 'localhost',
     user: 'root',
     password: '',
-    port : 3306,
+    port : 4000,
     database : 'ecole241'
 }
 //extraction des donne du formulaire
